@@ -6,20 +6,23 @@ Repositório com os labs que pratiquei para o exame **AI-900**, usando a experi�
 - OCR / Content Understanding (invoice)
 - Testes extras com minha própria imagem
 
-Os recursos do Azure já foram apagados (para evitar custo), então aqui ficam apenas os **arquivos de dados** e a **descrição do que foi feito**.
+Os recursos do Azure já foram apagados (para evitar custo). Aqui ficam apenas os arquivos de dados e a descrição do que foi feito.
 
 ---
 
-## 📁 Estrutura deste repositório
+## 📁 Arquivos deste repositório
 
-- `data/images/`  
-  Imagens usadas nos labs:
-  - `store-camera-*.jpg` – imagens de exemplo do lab de Image Analysis (loja, câmeras etc.).
-  - `claudio.jpg` – minha foto usada em testes de detecção de pessoa no Foundry (opcional).
+- `store-camera-1.jpg`  
+- `store-camera-2.jpg`  
+- `store-camera-3.jpg`  
+- `store-camera-4.jpg`  
+  > Imagens de exemplo usadas nos labs de **Image Analysis** (Vision + Document – aba *Image*).
 
-- `data/docs/`  
-  Documentos usados no lab:
-  - `contoso-invoice-1.pdf` – invoice usada no lab de **Content Understanding / Invoice Data Extraction**.
+- `claudio.jpg` *(opcional)*  
+  > Minha foto usada em **Common object detection** no Foundry para testar detecção de pessoa.
+
+- `contoso-invoice-1.pdf` *(vou subir depois)*  
+  > Invoice usada no lab de **Content Understanding / Invoice Data Extraction**.
 
 ---
 
@@ -27,33 +30,31 @@ Os recursos do Azure já foram apagados (para evitar custo), então aqui ficam a
 
 **Objetivo**
 
-Explorar a análise de imagens no **Microsoft Foundry**, na seção:
+Explorar a análise de imagens no **Microsoft Foundry**, em:
 
 > AI Services → Vision + Document → aba *Image*
 
-Usando os recursos de:
+Usando:
 
-- **Image captioning** – gerar uma legenda em texto descrevendo a imagem.
-- **Dense captioning** – gerar várias legendas para diferentes regiões da imagem.
-- **Common tag extraction** – gerar tags (palavras-chave) com score de confiança.
-- **Common object detection** – detectar objetos/pessoas na imagem com bounding boxes.
+- **Image captioning** – gerar uma legenda em texto descrevendo a imagem.  
+- **Dense captioning** – gerar várias legendas para diferentes regiões.  
+- **Common tag extraction** – gerar tags com score de confiança.  
+- **Common object detection** – detectar objetos/pessoas com bounding boxes.
 
-**Arquivos**
+**Imagens usadas**
 
-As imagens usadas neste lab estão em:
-
-- `data/images/store-camera-1.jpg`
-- `data/images/store-camera-2.jpg`
-- `data/images/store-camera-3.jpg`
-- `data/images/store-camera-4.jpg`
+- `store-camera-1.jpg`
+- `store-camera-2.jpg`
+- `store-camera-3.jpg`
+- `store-camera-4.jpg`
 
 ---
 
-## 🧾 Lab 2 – OCR e Content Understanding (Invoice)
+## 🧾 Lab 2 – OCR / Content Understanding (Invoice)
 
 **Objetivo**
 
-Usar o **Content Understanding** no Foundry para extrair informações estruturadas de uma invoice (nota fiscal), como:
+Usar **Content Understanding** no Foundry para extrair dados estruturados de uma invoice:
 
 - Invoice ID  
 - Invoice Date  
@@ -63,37 +64,29 @@ Usar o **Content Understanding** no Foundry para extrair informações estrutura
 
 **Como foi feito (resumo)**
 
-- Criei um projeto de **Content Understanding** no Foundry.
-- Usei o modelo de **Invoice Data Extraction**.
-- Analisei o arquivo `contoso-invoice-1.pdf`, localizado em `data/docs/`.
-- Vi na interface os campos detectados e também o resultado em **JSON**.
-
-**Arquivo**
-
-- `data/docs/contoso-invoice-1.pdf`
+- Criei um projeto de **Content Understanding** no Foundry.  
+- Usei o modelo de **Invoice Data Extraction**.  
+- Analisei o arquivo `contoso-invoice-1.pdf`.  
+- Conferi os campos detectados na interface e o resultado em **JSON**.
 
 ---
 
-## 🙂 Lab 3 – Teste extra de visão com minha foto (Foundry)
+## 🙂 Lab 3 – Teste extra de visão com minha foto
 
 **Objetivo**
 
-Complementar o estudo de visão usando minha própria imagem no Foundry, em:
+Complementar o estudo de visão usando minha própria imagem em:
 
 > AI Services → Vision + Document → aba *Image* → **Common object detection**
 
-**O que foi feito**
+**O que aconteceu**
 
-- Subi uma imagem minha (`claudio.jpg`) no Foundry.
-- O modelo detectou o objeto **`person`** na imagem.
+- Subi a imagem `claudio.jpg` no Foundry.  
+- O modelo detectou o objeto **`person`**.  
 - A interface mostrou:
-  - Um **bounding box** (quadrado) em volta do meu rosto/corpo.
-  - Um **score de confiança**, por exemplo: `person (86.80%)`.
-  - Um controle de **Threshold value** para ajustar o score mínimo exibido.
-
-**Arquivo (opcional)**
-
-- `data/images/claudio.jpg` – só será incluído se eu quiser expor a foto no GitHub.
+  - um **bounding box** em volta da pessoa;  
+  - um **score de confiança**, ex.: `person (86.80%)`;  
+  - um controle de **Threshold value** para ajustar o score mínimo.
 
 ---
 
@@ -103,7 +96,7 @@ Complementar o estudo de visão usando minha própria imagem no Foundry, em:
   - legendas de imagem,
   - tags,
   - detecção de objetos/pessoas.
-- Conceitos de **OCR** e **extração de dados estruturados** com Content Understanding.
-- Experiência prática com o **Microsoft Foundry**, a plataforma nova da Microsoft para trabalhar com Azure AI.
+- Conceitos de **OCR** e extração de dados estruturados com Content Understanding.
+- Experiência prática com o **Microsoft Foundry**, a plataforma nova de Azure AI.
 
 ---
